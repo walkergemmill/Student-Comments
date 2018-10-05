@@ -28,3 +28,25 @@ remove_dots = str.maketrans('', '', "....")
 no_dot = w.translate(remove_dots)
 
 print(no_dot)
+
+
+#Seperating
+
+x = 0
+
+phrase = "stuPidEDyouareSOdumBs"
+names = []
+for l in phrase:
+    names.append(l)
+    if l.isupper():
+        x+=1
+        if x%3 == 0:
+            names_list = "".join(names)
+
+            remove_stuff = str.maketrans('', '', "' , ")
+            no_stuff = names_list.translate(remove_stuff)
+
+            print(no_stuff + " good job")
+            names = [""]
+
+
